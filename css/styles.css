@@ -1,0 +1,63 @@
+body {
+  text-align: center;
+  font-family: "Fraunces", sans-serif;
+}
+header {
+  background-image: url("/images/desktop/image-header.jpg");
+  background-size: cover;
+  color: white;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 1rem;
+  width: 95%;
+}
+#nav-links {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  align-items: center;
+}
+.nav-link {
+  color: white;
+  margin: 1rem;
+}
+#contact {
+  padding: 0.7rem 1rem;
+  color: hsl(212, 27%, 19%);
+  background: hsl(0, 0%, 100%);
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: 0.3s;
+  font-family: "Fraunces", serif;
+  font-size: 0.9rem;
+  transition: all 0.2s ease-in-out;
+}
+#contact:hover {
+  color: white;
+  background-color: rgb(145, 224, 255);
+}
+#header-content {
+  height: 100vh;
+  position: relative;
+  top: 6rem;
+  margin-left: 3rem;
+}
+#header-content h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+}
+#header-content img {
+  margin-top: 8rem;
+}
+@media  (max-width: 375px) {
+    header {
+        background-image: url("/images/mobile/image-header.jpg");
+        background-size: cover;
+        
+      }
+}
