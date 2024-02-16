@@ -1,13 +1,27 @@
+:root{
+  --Dark_desaturated_cyan: hsl(167, 40%, 24%);
+  --Dark_blue :hsl(198, 62%, 26%);
+  --Yellow: hsl(51, 100%, 49%);
+  --White:white;
+  --Very_dark_desaturated_blue:hsl(212, 27%, 19%);
+  --bg-white :#fffbf7;
+  --Grayish_blue:hsl(210, 4%, 67%);
+  --Dark_grayish_blue:hsl(232, 10%, 55%);
+  --Soft_orange:hsla(6.8, 98.7%, 70%);
+  --Very_dark_grayish_blue:hsl(213, 9%, 39%);
+  --footer-bg:hsl(167, 44%, 70%);
+  --Yellowish: hsl(51, 100%, 49%);
+}
 body {
   text-align: center;
   font-family: "Fraunces", sans-serif;
-  background-color: #fffbf7;
+  background-color:var(--bg-white);
 }
 
 header {
   background-image: url("/images/desktop/image-header.jpg");
   background-size: cover;
-  color: white;
+  color: var(--White);
 }
 .logo {
   width: 12rem;
@@ -37,13 +51,13 @@ header {
   flex-grow: 0;
 }
 .nav-link {
-  color: white;
+  color: var(--White);
   margin: 1rem;
 }
 #contact {
   padding: 0.7rem 1rem;
-  color: hsl(212, 27%, 19%);
-  background: hsl(0, 0%, 100%);
+  color: var(--Very_dark_desaturated_blue);
+  background: var(--White);
   border-radius: 2rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -53,7 +67,7 @@ header {
   transition: all 0.2s ease-in-out;
 }
 #contact:hover {
-  color: white;
+  color: var(--White);
   background-color: rgba(255, 255, 255, 0.25);
 }
 #header-content {
@@ -94,10 +108,10 @@ header {
 .texts h1 {
   margin: 0 0 2rem;
   font-weight: 900;
-  color: hsl(212, 27%, 19%);
+  color: var(--very_dark_saturated_blue);
 }
 .texts p {
-  color: hsl(232, 10%, 55%);
+  color: var(--Dark_grayish_blue);
   font-family: "Barlow", sans-serif;
   line-height: 1.4;
   font-size: 18px;
@@ -105,7 +119,7 @@ header {
 }
 .learn a {
   text-decoration: none;
-  color: hsl(212, 27%, 19%);
+  color: var(--very_dark_saturated_blue);
   font-family: "Fraunces", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -123,10 +137,10 @@ header {
   border-radius: 5rem;
   transition: 0.5s;
   opacity: 0.5;
-  background-color: hsla(50.9, 100%, 49%);
+  background-color: var(--Yellow);
 }
 .view-2 .texts a::after {
-  background-color: hsla(6.8, 98.7%, 70%);
+  background-color: var(--Soft_orange);
 }
 .view-3-sec {
   position: relative;
@@ -153,10 +167,10 @@ header {
   font-weight: 500;
 }
 #photography {
-  color: hsl(198, 62%, 26%);
+  color: var(--Dark_blue);
 }
 #graphic-design {
-  color: hsl(167, 40%, 24%);
+  color: var(--Dark_desaturated_cyan);
 }
 
 .testimonial {
@@ -168,7 +182,7 @@ header {
   font-size: 1.5rem;
   font-weight: 900;
   letter-spacing: 0.3rem;
-  color: hsl(210, 4%, 67%);
+  color: var(--Grayish_blue);
   margin-bottom: 6rem;
 }
 .testimonial div {
@@ -183,7 +197,7 @@ header {
   margin-bottom: 2.5rem;
 }
 .testimonials p {
-  color: hsl(213, 9%, 39%);
+  color: var(--Very_dark_grayish_blue);
   font-weight: 600;
   font-family: "Barlow", sans-serif;
   margin-bottom: 3rem;
@@ -192,12 +206,12 @@ header {
   display: block;
 }
 .people-name {
-  color: hsl(212, 27%, 19%);
+  color: var(--very_dark_saturated_blue);
   font-weight: 900;
   font-size: 1.2rem;
 }
 .people-responsibility {
-  color: hsl(210, 4%, 67%);
+  color: var(--Grayish_blue);
   font-family: "Barlow", sans-serif;
   font-weight: 600;
 }
@@ -209,7 +223,7 @@ header {
   padding: 0;
 }
 footer {
-  background-color: #90d4c5;
+  background-color: var(--footer-bg);
   margin: 0;
   padding: 3rem 4rem 0;
 }
@@ -223,7 +237,7 @@ footer ul {
   list-style: none;
 }
 .footer-links li a {
-  color: hsl(167, 40%, 24%);
+  color: var(--Dark_desaturated_cyan);
   font-weight: 600;
   margin: 0 3rem;
   text-decoration: none;
@@ -238,6 +252,31 @@ footer ul {
 }
 
 @media (max-width: 62rem) {
+    .navbar-collapse.collapsing,
+    .navbar-collapse.show {
+      background-color: var(--White);
+      position: relative;
+      top: 2rem;
+      padding: 2rem 0;
+    }
+    .navbar-collapse::before{
+    content: "";
+    border-left: 1.5rem solid transparent;
+    border-bottom: 1.5rem solid var(--White);
+    position: absolute;
+    top: -1.5rem;
+    right: 0;
+    
+    }
+    .nav-link{
+      color: var(--Very_dark_grayish_blue);
+    }
+    #contact{
+      background-color: var(--Yellowish);
+      width: 50%;
+      margin: 1rem auto;
+      
+    }
   header {
     background-image: url("/images/mobile/image-header.jpg");
     background-position: center;
