@@ -3,26 +3,38 @@ body {
   font-family: "Fraunces", sans-serif;
   background-color: #fffbf7;
 }
+
 header {
   background-image: url("/images/desktop/image-header.jpg");
   background-size: cover;
   color: white;
 }
-.logo{
-    width: 12rem;
-    height: auto;
-} 
+.logo {
+  width: 12rem;
+  height: auto;
+}
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  top: 1rem;
-  width: 95%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  padding: 0.7rem 0.9rem;
+  transition: 0.4s;
 }
-#nav-links {
+.navbar-active{
+    background-color: #3cbdfd;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+
+}
+#navbarToggler1 {
   font-family: "Barlow", sans-serif;
   font-weight: 600;
   align-items: center;
+}
+.navbar-collapse {
+  flex-grow: 0;
 }
 .nav-link {
   color: white;
@@ -42,26 +54,38 @@ header {
 }
 #contact:hover {
   color: white;
-  background-color: rgba(255,255,255,.25);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 #header-content {
   height: 100vh;
   position: relative;
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 #header-content h1 {
   position: relative;
-  top: 6.5rem;
+  top: 25%;
   font-weight: 900;
   font-size: 3rem;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
 }
 #header-content img {
-  margin-top: 14rem;
+    position: relative;
+    top: 40%;
 }
 .view {
   padding: 0;
+  margin: 0;
+}
+.images {
+  padding: 0;
+}
+.images img {
+  width: 100%;
+  height: 100%;
+}
+.mobile-image {
+  display: none;
 }
 .texts {
   padding: 9.4rem;
@@ -79,16 +103,17 @@ header {
   font-size: 18px;
   margin: 0 0 2rem;
 }
-.texts a {
+.learn a {
   text-decoration: none;
   color: hsl(212, 27%, 19%);
   font-family: "Fraunces", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   margin: 0 0 0 0.5rem;
+  display: block;
 }
 
-.texts a::after {
+.learn a::after {
   content: "";
   width: 9rem;
   height: 0.6rem;
@@ -98,15 +123,16 @@ header {
   border-radius: 5rem;
   transition: 0.5s;
   opacity: 0.5;
-  background-color: hsla(50.9,100%,49%);
+  background-color: hsla(50.9, 100%, 49%);
 }
 .view-2 .texts a::after {
-  background-color: hsla(6.8,98.7%,70%);
+  background-color: hsla(6.8, 98.7%, 70%);
 }
 .view-3-sec {
   position: relative;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 .view-3-text {
   position: absolute;
@@ -144,6 +170,9 @@ header {
   letter-spacing: 0.3rem;
   color: hsl(210, 4%, 67%);
   margin-bottom: 6rem;
+}
+.testimonial div {
+  margin: 0;
 }
 .testimonials {
   padding: 3rem;
@@ -187,7 +216,6 @@ footer {
 
 footer img {
   margin-bottom: 4rem;
-  
 }
 footer ul {
   display: flex;
@@ -205,6 +233,63 @@ footer ul {
   padding-top: 5rem;
   margin: 0rem;
 }
-.social-icons li a{
-margin: 0 1rem;
+.social-icons li a {
+  margin: 0 1rem;
+}
+
+@media (max-width: 62rem) {
+  header {
+    background-image: url("/images/mobile/image-header.jpg");
+    background-position: center;
+  }
+  .desktop-image {
+    display: none;
+  }
+  .mobile-image {
+    display: block;
+    width: 100%;
+  }
+  .view-1 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .texts {
+    text-align: center;
+  }
+  .texts a::after {
+    left: 42%;
+    transform: translate(0);
+  }
+  .view-3-text {
+    bottom: 7rem;
+  }
+}
+@media (max-width: 36rem) {
+  .logo {
+    width: 10rem;
+  }
+  #header-content {
+    margin: 0;
+  }
+  .footer-links li a {
+    padding: 1rem;
+    margin: 0rem 0.7rem;
+  }
+  .texts {
+    padding: 4rem 2rem;
+  }
+  .texts a::after {
+    left: 32%;
+    transform: translate(0);
+  }
+  .view-3-text {
+    bottom: 2rem;
+  }
+  .testimonial {
+    padding: 1rem 0 1rem 1rem;
+  }
+  .testimonial h1 {
+    margin-bottom: 2rem;
+  }
 }
